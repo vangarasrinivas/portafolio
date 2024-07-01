@@ -5,6 +5,7 @@ import insta from '../assets/Instagram.webp'
 import linkedIn from '../assets/linkedIn.png'
 import gitHub from '../assets/github.png'
 import whatsapp from '../assets/WhatsApp_icon.png.webp'
+import profileimg from '../assets/profileimage.jpg'
 const Banner = () => {
     const [cout, setCount] = useState(0)
 
@@ -99,7 +100,7 @@ const Banner = () => {
                     <div className='content-center'>
 
                         <div className='banner-image-div'>
-                            <img src={first} width="450px" />
+                            <img src={profileimg} width="400px" />
                         </div>
 
                     </div>
