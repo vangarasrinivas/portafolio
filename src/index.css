@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html *
+{
+   font-family: serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -64,7 +69,7 @@ code {
 }
 .span-3{
   font-size: 45px;
-  color: red;
+  color: #9743e4;
   font-weight: 700;
 }
 .banner-image-div{
@@ -99,3 +104,82 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.border-botom{
+  border-bottom: 4px solid #9743e4;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@keyframes progress-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-value);
+  }
+}
+
+.progress-bar {
+  height: 10px; /* You can adjust the height as needed */
+  background-color: var(--progress-color);
+  border-radius: 10px;
+  animation: progress-animation 2s ease-in-out forwards;
+}
+
+
+
+.letter-onebyone {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: example 1.75s linear 0s infinite alternate;
+}
+
+@keyframes example {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+  /* put your css styles in here */
+}
+
+ 
+@media all and (min-width:0px) and (max-width: 568px) {
+  /* put your css styles in here */
+  .text-center-small{
+    text-align: center;
+  }
+  .margin-top2-small{
+    margin-top: 2rem;
+  }
+}
+
+ 
+
+
