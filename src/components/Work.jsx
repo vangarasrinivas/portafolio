@@ -8,7 +8,14 @@ import work6 from '../assets/work6.jpg'
 
 
 const Work = () => {
-    const pics = [work1, work2, work3, work4, work5, work6]
+    const pics = [
+        { item: work1, fade: 'fade-right' },
+        { item: work2, fade: '' },
+        { item: work3, fade: 'fade-left' },
+        { item: work4, fade: 'fade-right' },
+        { item: work5, fade: '' },
+        { item: work6, fade: 'fade-left' },
+    ]
     return (
         <div className="container-fluid mt-4" id='work'>
             <div className='d-flex justify-content-center'>
@@ -20,8 +27,8 @@ const Work = () => {
                 <div className="row">
                     {
                         pics?.slice(0, 3)?.map((item) => {
-                            return <div className='col-sm-4 mb-4' style={{ overflow: 'hidden' }}>
-                                <img className='work-image' src={item} width='100%' style={{ borderRadius: '15px' }} />
+                            return <div data-aos-delay="7000" data-aos={item?.fade} className='col-sm-4 mb-4' style={{ overflow: 'hidden' }}>
+                                <img className='work-image' src={item?.item} width='100%' style={{ borderRadius: '15px' }} />
                             </div>
                         })
                     }
@@ -30,8 +37,8 @@ const Work = () => {
                 <div className="row d-none-small">
                     {
                         pics?.slice(3)?.map((item) => {
-                            return <div className='col-sm-4 mb-4' style={{ overflow: 'hidden' }}>
-                                <img className='work-image' src={item} width='100%' style={{ borderRadius: '15px' }} />
+                            return <div data-aos-delay="7000" data-aos={item?.fade} className='col-sm-4 mb-4' style={{ overflow: 'hidden' }}>
+                                <img className='work-image' src={item?.item} width='100%' style={{ borderRadius: '15px' }} />
                             </div>
                         })
                     }

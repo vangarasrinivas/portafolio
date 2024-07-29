@@ -15,7 +15,7 @@ const Footer = () => {
           <img src={whatsapp} width={30} className='me-4' />
         </a>
         <a data-aos-delay="300" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://www.instagram.com/vangara_srinivas/' target='_blank'><img src={insta} width={30} className='me-4' /></a>
-        <a data-aos-delay="500" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://github.com/vangarasrinivas?tab=repositories' target='_blank'><img src={linkedIn} width={30} className='me-4' /></a>
+        <a data-aos-delay="500" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='hhttps://www.linkedin.com/in/vangara-srinivas-b2a983127/' target='_blank'><img src={linkedIn} width={30} className='me-4' /></a>
         <a data-aos-delay="700" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://github.com/vangarasrinivas?tab=repositories' target='_blank'><img src={gitHub} width={30} className='me-4' /></a>
         <a data-aos-delay="900" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://www.facebook.com/profile.php?id=100006435709182' target='_blank'><img src={fb} width={30} /></a>
       </div>

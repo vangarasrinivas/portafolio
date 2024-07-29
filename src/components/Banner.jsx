@@ -6,7 +6,7 @@ import linkedIn from '../assets/linkedIn.png'
 import profileimage2 from '../assets/profileimage2.jpeg'
 import whatsapp from '../assets/WhatsApp_icon.png.webp'
 const Banner = () => {
- 
+
     return (
         <>
             <div style={{ background: '#f8f7ff' }} className='py-4'>
@@ -21,7 +21,7 @@ const Banner = () => {
                                     I specialize in creating high-quality, websites and applications.
                                     <span className='d-none-small'>My expertise spans across both front-end and back-end technologies.</span>
                                 </div>
-                                <button data-aos-delay="300" data-aos="fade-zoom-in" className='btn bg-violet text-white mt-4 px-5'>Hire me</button>
+                                <a data-aos-delay="300" data-aos="fade-zoom-in" href='#contact' className='btn bg-violet text-white mt-4 px-5'>Hire me</a>
                                 <div className='mt-5 mb-4'>
 
                                     <a data-aos-delay="500" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href="https://wa.me/9491118102?text=Hello%2C%20Srinivas!" target='_blank'><img src={whatsapp} width={30} className='me-4' /></a>
