@@ -46,9 +46,14 @@ code {
 
 }
 
+.navtext-underline{
+  padding-bottom: 1px;
+  border-bottom: 2px solid white;
+}
+
 .cnav-brand{
-  margin-left: 30%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 30%;
 }
 .banner-div{
   height: 700px;
@@ -172,14 +177,51 @@ code {
  
 @media all and (min-width:0px) and (max-width: 568px) {
   /* put your css styles in here */
+
+  .span-1{
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .span-2{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .span-3{
+    font-size: 40px;
+    color: #9743e4;
+    font-weight: 700;
+  }
+
   .text-center-small{
     text-align: center;
   }
   .margin-top2-small{
     margin-top: 2rem;
   }
+  .margin-top1-small{
+    margin-top: 1rem;
+  }
+
+  .cnav-brand{
+    margin-left: 5%;
+    margin-right: 10%;
+  }
+
+  .d-none-small{
+    display: none;
+  }
 }
 
  
 
+.work-image {
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
 
+.work-image:hover {
+  transform: scale(1.1); /* Scales the image to 110% */
+}
+
+.margin-1-top{
+  margin-top: 1rem;
+}

@@ -19,8 +19,8 @@ const ProgressBar = ({ skill, percentage, color, img, width }) => {
                 boxShadow: '0px 4px 25px rgba(14, 36, 49, 0.15)',
             }}
         >
-            <div className='d-flex justify-content-between px-4'>
-                <div className='d-flex'>
+            <div className='d-flex justify-content-between align-items-center px-4'>
+                <div className='d-flex align-items-center'>
                     <div>
                         <img src={img} width={width || 30} className='me-3' />
                     </div>

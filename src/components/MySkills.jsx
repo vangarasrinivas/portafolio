@@ -1,23 +1,22 @@
 import React from 'react'
-import FadeEffect from './FadeEffect'
-import ProgressBar from './ProgressBar'
-import html from '../assets/html.png'
-import CSS from '../assets/css.jpg'
-import js from '../assets/js.png'
-import mui from '../assets/mui.png'
 import bootstrap from '../assets/bootstrap.png'
+import CSS from '../assets/css.jpg'
+import html from '../assets/html.png'
+import js from '../assets/js.png'
+import mongodb from '../assets/mongodb.png'
+import mui from '../assets/mui.png'
+import nextjs from '../assets/nextjs.webp'
+import nodejs from '../assets/nodejs.png'
 import reactjs from '../assets/reactjs.png'
 import reactnative from '../assets/reactnative.jpg'
-import nodejs from '../assets/nodejs.png'
-import nextjs from '../assets/nextjs.webp'
-import mongodb from '../assets/mongodb.png'
+import ProgressBar from './ProgressBar'
 // import bootstrap from '../assets/bootstrap.png'
 
 const MySkills = () => {
- 
+
   return (
 
-    <div className="container mt-4">
+    <div className="container mt-4" id='skills'>
       <div className='d-flex justify-content-center'>
         <h2 className='border-botom text-violet pb-1' style={{ width: 'fit-content', fontWeight:'bolder' }}>Profesional Skills</h2>
       </div>
@@ -69,20 +68,6 @@ const MySkills = () => {
 
           </div>
 
-        </div>
-      </div>
-
-
-      <div className='mt-5'>
-        <h4>Fade Left</h4>
-        <div data-aos-delay="500" data-aos="fade-left" className='border border-4 border-danger py-3' style={{ paddingInline: '10rem' }}>
-          Hello
-        </div>
-        <div data-aos-delay="750" data-aos="fade-left" className='border border-4 border-success mt-5 py-3' style={{ paddingInline: '10rem' }}>
-          Hello1
-        </div>
-        <div data-aos-delay="1000" data-aos="fade-left" className='border border-4 border-warning mt-5 py-3' style={{ paddingInline: '10rem' }}>
-          Hello2
         </div>
       </div>
 

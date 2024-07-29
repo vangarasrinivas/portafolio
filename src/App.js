@@ -1,19 +1,30 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useState } from 'react';
 import './App.css';
 import Banner from './components/Banner';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import Experience from './components/Experience';
 import Footer from './components/Footer';
 import MySkills from './components/MySkills';
 import Navbar from './components/Navbar';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Work from './components/Work';
 function App() {
   AOS.init();
 
   return (
-    <div style={{overflow:'hidden', height:'2000px'}}>
+    <div>
       <Navbar />
-      <Banner />
-      <MySkills />
-      <Footer />
+      <div style={{overflow :'hidden'}}>
+        <Banner />
+        <MySkills />
+        <Experience />
+        <Work />
+        <Education />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
