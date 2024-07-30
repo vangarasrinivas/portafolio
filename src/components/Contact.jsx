@@ -11,7 +11,7 @@ const Contact = () => {
         if (tx) {
             setTimeout(() => {
                 setTx(false)
-            }, 4000)
+            }, 3000)
         }
     }, [tx])
 
@@ -25,7 +25,7 @@ const Contact = () => {
                     console.log('SUCCESS!', result.text);
                     form.current.reset();
                     setLoading(false)
-                    setTx('Thank You!')
+                    setTx(true)
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -59,32 +59,42 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className='col-sm-6'>
-                            <form ref={form} onSubmit={sendEmail}>
-                                <div className="row" data-aos-delay="7000" data-aos="fade-left">
-                                    <div className='col-sm-6'>
-                                        <input placeholder='Name' className='form-control d-none' type="text" value={'Srinivas'} name="to_name" />
-                                        <input placeholder='Name' className='form-control margin-top2-small' type="text" name="from_name" required />
+                            {
+                                tx && (
+                                    <div className='text-center mt-4'>
+                                        <h1><strong>Thank You!</strong></h1>
+                                        <h4><strong>We will get back to you!</strong></h4>
                                     </div>
+                                )
+                            }
+                            {
+                                !tx && (
+                                    <form ref={form} onSubmit={sendEmail}>
+                                        <div className="row" data-aos-delay="7000" data-aos="fade-left">
+                                            <div className='col-sm-6'>
+                                                <input placeholder='Name' className='form-control d-none' type="text" value={'Srinivas'} name="to_name" />
+                                                <input placeholder='Name' className='form-control margin-top2-small' type="text" name="from_name" required />
+                                            </div>
 
-                                    <div className='col-sm-6'>
-                                        <input placeholder='Phone' className='form-control margin-top2-small' type="text" name="phone_no" required />
+                                            <div className='col-sm-6'>
+                                                <input placeholder='Phone' className='form-control margin-top2-small' type="text" name="phone_no" required />
 
-                                    </div>
-                                </div>
-                                <div className="row mt-4">
-                                    <div className='col-sm-12 data-aos-delay="7000" data-aos="fade-left"'>
-                                        <input placeholder='Email' className='form-control d-none' value={'srinivasvangara96@gmail.com'} type="email" name="user_email" />
-                                        <input placeholder='Email' className='form-control' type="email" name="from_email" required />
-                                    </div>
-                                </div>
-                                <div className='mt-4' data-aos-delay="7000" data-aos="fade-right">
-                                    <textarea placeholder='Message' className='form-control' name="message" />
-                                </div>
-                                {
-                                    tx && <h1 className='mt-4'><strong>Thank You!</strong></h1>
-                                }
-                                <input type="submit" disabled={loading} value={loading ? 'Sending mail...' : "Send"} data-aos-delay="7000" data-aos="fade-left" className='btn bg-violet text-white mt-4 px-5' />
-                            </form>
+                                            </div>
+                                        </div>
+                                        <div className="row mt-4">
+                                            <div className='col-sm-12 data-aos-delay="7000" data-aos="fade-left"'>
+                                                <input placeholder='Email' className='form-control d-none' value={'srinivasvangara96@gmail.com'} type="email" name="user_email" />
+                                                <input placeholder='Email' className='form-control' type="email" name="from_email" required />
+                                            </div>
+                                        </div>
+                                        <div className='mt-4' data-aos-delay="7000" data-aos="fade-right">
+                                            <textarea placeholder='Message' className='form-control' name="message" />
+                                        </div>
+
+                                        <input type="submit" disabled={loading} value={loading ? 'Sending mail...' : "Send"} data-aos-delay="7000" data-aos="fade-left" className='btn bg-violet text-white mt-4 px-5' />
+                                    </form>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
