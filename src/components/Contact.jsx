@@ -1,9 +1,19 @@
 import emailjs from 'emailjs-com';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Contact = () => {
     const form = useRef();
     const [loading, setLoading] = useState(false)
+    const [tx, setTx] = useState(false)
+
+
+    useEffect(() => {
+        if (tx) {
+            setTimeout(() => {
+                setTx(false)
+            }, 4000)
+        }
+    }, [tx])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -15,6 +25,7 @@ const Contact = () => {
                     console.log('SUCCESS!', result.text);
                     form.current.reset();
                     setLoading(false)
+                    setTx('Thank You!')
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -41,8 +52,8 @@ const Contact = () => {
                                 <span><strong>Email :</strong></span> <span>srinivasvangara96@gmail.com</span>
                             </div>
                             <div className='fs-5 mt-4'>
-                                Full-Stack Developer with extensive experience in web design and development. 
-                                I specialize in creating high-quality, websites and applications. 
+                                Full-Stack Developer with extensive experience in web design and development.
+                                I specialize in creating high-quality, websites and applications.
                                 My expertise spans across both front-end and back-end technologies.
 
                             </div>
@@ -69,6 +80,9 @@ const Contact = () => {
                                 <div className='mt-4' data-aos-delay="7000" data-aos="fade-right">
                                     <textarea placeholder='Message' className='form-control' name="message" />
                                 </div>
+                                {
+                                    tx && <h1 className='mt-4'><strong>Thank You!</strong></h1>
+                                }
                                 <input type="submit" disabled={loading} value={loading ? 'Sending mail...' : "Send"} data-aos-delay="7000" data-aos="fade-left" className='btn bg-violet text-white mt-4 px-5' />
                             </form>
                         </div>

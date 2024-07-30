@@ -210,6 +210,9 @@ code {
   .d-none-small{
     display: none;
   }
+  .copy-right-text{
+    font-size: 1rem;;
+  }
 }
 
  

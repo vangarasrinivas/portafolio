@@ -19,7 +19,7 @@ const Footer = () => {
         <a data-aos-delay="700" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://github.com/vangarasrinivas?tab=repositories' target='_blank'><img src={gitHub} width={30} className='me-4' /></a>
         <a data-aos-delay="900" data-aos="fade-zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="600" href='https://www.facebook.com/profile.php?id=100006435709182' target='_blank'><img src={fb} width={30} /></a>
       </div>
-      <h5 className='text-white mt-4 pb-5'>© vangara srinivas. All rigths reserved</h5>
+      <h5 className='text-white copy-right-text mt-4 pb-5'>© 2024 vangara srinivas. All rigths reserved.</h5>
     </div>
   )
 }
